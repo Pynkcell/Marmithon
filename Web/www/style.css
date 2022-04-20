@@ -153,8 +153,16 @@ nav{
 	background-color: rgb(73, 19, 19);
 }
 
+.redred::after {
+	content: ' c\'est ok';
+}
+.hide {
+	display: none;
+}
 
-
+.redred {
+	font-size: large;
+}
 
 
 
