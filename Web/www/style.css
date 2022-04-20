@@ -1,0 +1,161 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+html {
+	background-color: #5fdfff;
+}
+  
+
+body {
+	width: 900px;
+	margin: 0 auto;
+	background-color: #ffffff;
+	padding: 0 20px 20px 20px;
+	border: 5px solid black;
+}
+  
+
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+
+	margin: 0;
+	padding: 20px 0;
+	color: #db7979;
+	text-shadow: 3px 3px 1px black;
+}
+
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+	margin: 0;
+	padding: 20px 0;
+	color: #000000;
+}
+
+
+H3 {
+
+	font-size: 20px;
+} 
+
+#recettes {
+
+	padding: 20px 0;
+	text-align: justify;
+} 
+
+
+
+
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+#bloc_page{
+    margin: auto;
+}
+  
+nav{
+    top: 0;
+    width: 100%;
+    background : rgb(141, 78, 78);
+    margin: 0; padding: 0;
+    text-align: center;
+}
+
+
+#menu{
+    margin:0;
+}
+
+
+#menu li{
+    display: inline;
+    list-style: none;
+}
+  
+#menu li a{
+    display:inline-block;
+    margin: 10px;
+    color : white;
+
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+#menu li a:hover {
+	background-color: rgb(73, 19, 19);
+}
+
+
+
+
+
+
+
