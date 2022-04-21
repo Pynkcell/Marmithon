@@ -10,7 +10,7 @@ var valid = {
 
 //Verification du nom de famille
 var nom = document.getElementById('lastname')
-var reg_nom = new RegExp('^[a-zA-Z]+$$')
+var reg_nom = new RegExp(/^[a-zA-Z]+-?[a-zA-Z]+$/)
 var verifNom = function() {
     if(!reg_nom.test(nom.value)){
         nom.className = "red"
@@ -40,9 +40,9 @@ var verifPrenom = function() {
 prenom.addEventListener('focusout', verifPrenom)
 
 
-//Verification du nom d'utilisateur
+//Verification du nom d'utilisateur lors de l'enregistrement
 var username = document.getElementById('username')
-var reg_username = new RegExp('^\\w+$')
+var reg_username = new RegExp(/^\w{6}\w*$/)
 var verifUsername = function() {
     if(!reg_username.test(username.value)){
         username.className = "red"
@@ -121,11 +121,14 @@ Conditions du mdp :
 
 //Bouton de validation 
 var boutonSubmit = document.getElementById('submit')
+var formulaire = document.getElementById('register')
 var messageVal = document.getElementById('validForm')
-var suite = true
-var verifSubmit = function() {
-    for (const bool of valid) {
-        if (!bool) {
+
+formulaire.addEventListener('submit', function(e){
+
+    var suite = true
+    for (const bool in valid) {
+        if (!valid[bool]) {
             suite = false
             break
         }
@@ -133,14 +136,12 @@ var verifSubmit = function() {
 
     if(suite) {
         messageVal.className = "hide"
-    
+        
     
     }
     else {
         messageVal.className = "red"
+        e.preventDefault() 
     }
-}
-
-
-boutonSubmit.addEventListener('click', verifSubmit)
+})
 
