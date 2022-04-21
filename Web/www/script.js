@@ -120,7 +120,6 @@ Conditions du mdp :
 
 
 //Bouton de validation 
-var boutonSubmit = document.getElementById('submit')
 var formulaire = document.getElementById('register')
 var messageVal = document.getElementById('validForm')
 
@@ -144,4 +143,25 @@ formulaire.addEventListener('submit', function(e){
         e.preventDefault() 
     }
 })
+
+
+
+//Message de login
+var formulaire = document.getElementById('login')
+formulaire.addEventListener('submit', function(e) {
+    e.preventDefault()
+    console.log(e)
+    var httpRequestLogin = new XMLHttpRequest()
+
+    httpRequestLogin.onreadystatechange = function() {
+        if(httpRequestLogin.readyState === 4) {
+            document.getElementById('resultLogin').innerHTML = httpRequestLogin.responseText
+        }
+    }
+
+    httpRequestLogin.open('GET', this.getAttribute('action'), true)
+    httpRequestLogin.send()
+
+})
+
 
