@@ -150,7 +150,6 @@ formulaire.addEventListener('submit', function(e){
 var formulaire = document.getElementById('login')
 formulaire.addEventListener('submit', function(e) {
     e.preventDefault()
-    console.log(e)
     var httpRequestLogin = new XMLHttpRequest()
 
     httpRequestLogin.onreadystatechange = function() {
@@ -159,7 +158,7 @@ formulaire.addEventListener('submit', function(e) {
         }
     }
 
-    httpRequestLogin.open('GET', this.getAttribute('action'), true)
+    httpRequestLogin.open('GET', this.getAttribute('action')+'?username='+e.target[0].value+'&userpwd='+e.target[1].value, true)
     httpRequestLogin.send()
 
 })
